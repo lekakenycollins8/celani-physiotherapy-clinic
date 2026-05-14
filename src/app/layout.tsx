@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCTA } from "@/components/ui/StickyCTA";
+import { MobileBookingBar } from "@/components/ui/MobileBookingBar";
+import { LocalBusinessJsonLd } from "@/components/JsonLd";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -13,6 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.celaniphysio.com"),
   title: "Physiotherapy & Sports Injury Rehabilitation in Nairobi | CELANI Physiotherapy",
   description: "CELANI Physiotherapy and Sports Injuries Clinic offers professional orthopedic, sports and pelvic floor rehabilitation in Nairobi.",
   openGraph: {
@@ -46,10 +49,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <LocalBusinessJsonLd />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
         <StickyCTA />
+        <MobileBookingBar />
       </body>
     </html>
   );

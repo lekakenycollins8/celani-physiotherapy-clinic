@@ -55,6 +55,44 @@ export const scaleIn: Variants = {
   },
 };
 
+// Slide in from left — for left columns in editorial 2-col layouts
+export const slideInLeft: Variants = {
+  hidden: { opacity: 0, x: -28 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: MOTION_DURATION.normal, ease: MOTION_EASING.easeOut },
+  },
+};
+
+// Slide in from right — for right columns / image panels
+export const slideInRight: Variants = {
+  hidden: { opacity: 0, x: 28 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: MOTION_DURATION.normal, ease: MOTION_EASING.easeOut },
+  },
+};
+
+// Simple fade — no movement, for backgrounds and overlays
+export const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: MOTION_DURATION.normal, ease: MOTION_EASING.easeOut },
+  },
+};
+
+// Fast stagger — tighter children delay for compact sections
+export const staggerFast: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.07, delayChildren: 0.1 },
+  },
+};
+
 // Hover animation wrapper
 export function withHoverAnimation(Component: React.ElementType) {
   const MotionComponent = motion(Component);
