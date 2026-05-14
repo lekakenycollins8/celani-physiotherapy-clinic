@@ -29,7 +29,7 @@ export function Hero() {
           priority
         />
         {/* Dark gradient overlay — ensures text legibility over the image */}
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/65 via-foreground/50 to-foreground/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/80 via-foreground/72 to-foreground/78" />
       </div>
 
       {/* ── DESKTOP: Warm editorial background ── */}
@@ -89,7 +89,7 @@ export function Hero() {
             {/* Body copy */}
             <motion.p
               variants={fadeInUp}
-              className="text-[0.95rem] md:text-base text-white/80 lg:text-muted-foreground leading-[1.85] max-w-[430px]"
+              className="text-[0.95rem] md:text-base text-white lg:text-muted-foreground leading-[1.85] max-w-[430px]"
             >
               At CELANI Physiotherapy, we specialise in Orthopedic, Sports and
               Pelvic Floor rehabilitation. We help you recover, rebuild strength
