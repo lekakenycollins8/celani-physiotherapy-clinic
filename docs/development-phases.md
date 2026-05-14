@@ -44,6 +44,19 @@
 
 ---
 
+# Phase 3b — About & Contact Pages
+
+## Tasks
+
+- About page
+- Team section
+- Mission and values section
+- Contact page
+- Contact information and opening hours
+- Location and directions
+
+---
+
 # Phase 4 — Services Architecture
 
 ## Tasks
