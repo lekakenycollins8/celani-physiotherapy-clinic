@@ -3,15 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  Activity,
-  Zap,
-  Heart,
-  Hand,
-  Plus,
-  ArrowUpDown,
-  Crosshair,
-  Dumbbell,
-  MoveHorizontal,
   Calendar,
   MessageCircle,
   MapPin,
@@ -23,72 +14,8 @@ import { SectionDescription } from "@/components/ui/SectionDescription";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { staggerContainer, fadeInUp } from "@/lib/motion";
 import { CLINIC_INFO } from "@/data/navigation";
-
-const services = [
-  {
-    icon: <Activity size={20} />,
-    title: "Orthopedic Rehabilitation",
-    description:
-      "Joint, muscle and bone recovery care for lasting mobility and sustained pain relief.",
-    href: "/services/orthopedic-rehabilitation",
-  },
-  {
-    icon: <Zap size={20} />,
-    title: "Sports Injury Rehabilitation",
-    description:
-      "Return to sport with expert guidance and a structured performance recovery program.",
-    href: "/services/sports-injury-rehabilitation",
-  },
-  {
-    icon: <Heart size={20} />,
-    title: "Pelvic Floor Rehabilitation",
-    description:
-      "Specialised pelvic care for women and men using sensitive, evidence-based methods.",
-    href: "/services/pelvic-floor-rehabilitation",
-  },
-  {
-    icon: <Hand size={20} />,
-    title: "Manual Therapy",
-    description:
-      "Hands-on treatment to restore movement, reduce pain and improve musculoskeletal function.",
-    href: "/services/manual-therapy",
-  },
-  {
-    icon: <Plus size={20} />,
-    title: "Post-Surgery Rehabilitation",
-    description:
-      "Safe, progressive recovery after surgical procedures guided by personalised treatment plans.",
-    href: "/services/post-surgery-rehabilitation",
-  },
-  {
-    icon: <ArrowUpDown size={20} />,
-    title: "Back & Neck Pain Treatment",
-    description:
-      "Evidence-based treatment for chronic and acute spinal pain conditions affecting daily life.",
-    href: "/services/back-neck-pain-treatment",
-  },
-  {
-    icon: <Crosshair size={20} />,
-    title: "Dry Needling",
-    description:
-      "Targeted muscle tension relief using precision needling techniques.",
-    href: "/services/dry-needling",
-  },
-  {
-    icon: <Dumbbell size={20} />,
-    title: "Exercise Therapy",
-    description:
-      "Strength and mobility rehabilitation programs tailored to your specific recovery goals.",
-    href: "/services/exercise-therapy",
-  },
-  {
-    icon: <MoveHorizontal size={20} />,
-    title: "Mobility & Strength Recovery",
-    description:
-      "Rebuild movement and functional strength to regain your active lifestyle.",
-    href: "/services/mobility-strength-recovery",
-  },
-];
+import { servicesData } from "@/data/services";
+import { SERVICE_ICONS } from "@/data/serviceIcons";
 
 export function ServicesHub() {
   return (
@@ -177,7 +104,7 @@ export function ServicesHub() {
        * Uses existing ServiceCard component for visual continuity.
        */}
       <section
-        className="py-16 md:py-20 lg:py-24"
+        className="py-8 md:py-8 lg:py-8"
         style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FAFAF8 100%)" }}
       >
         <Container>
@@ -210,13 +137,14 @@ export function ServicesHub() {
             viewport={{ once: true, amount: 0.05 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
           >
-            {services.map((service) => (
+            {servicesData.map((service) => (
               <ServiceCard
-                key={service.href}
-                icon={service.icon}
+                key={service.slug}
+                icon={SERVICE_ICONS[service.slug]}
                 title={service.title}
                 description={service.description}
-                href={service.href}
+                href={`/services/${service.slug}`}
+                conditions={service.conditions}
               />
             ))}
           </motion.div>
@@ -229,7 +157,7 @@ export function ServicesHub() {
        * Mirrors the WhyChooseUs angle but from a different origin axis,
        * creating a complementary diagonal rhythm across the site.
        */}
-      <section className="relative overflow-hidden py-20 md:py-24">
+      <section className="relative overflow-hidden py-8 md:py-8 lg:py-8">
         <div
           className="absolute inset-0 bg-primary scale-110"
           style={{ transform: "skewY(-2deg)", transformOrigin: "bottom right" }}

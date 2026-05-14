@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Activity, Zap, Heart, Hand, Plus, ArrowUpDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
@@ -10,51 +10,10 @@ import { SectionDescription } from "@/components/ui/SectionDescription";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { staggerContainer, fadeInUp } from "@/lib/motion";
+import { servicesData } from "@/data/services";
+import { SERVICE_ICONS } from "@/data/serviceIcons";
 
-const services = [
-  {
-    icon: <Activity size={20} />,
-    title: "Orthopedic Rehabilitation",
-    description:
-      "Joint, muscle and bone recovery care for lasting mobility and sustained pain relief.",
-    href: "/services/orthopedic-rehabilitation",
-  },
-  {
-    icon: <Zap size={20} />,
-    title: "Sports Injury Rehabilitation",
-    description:
-      "Return to sport with expert guidance and a structured performance recovery program.",
-    href: "/services/sports-injury-rehabilitation",
-  },
-  {
-    icon: <Heart size={20} />,
-    title: "Pelvic Floor Rehabilitation",
-    description:
-      "Specialised pelvic care for women and men using sensitive, evidence-based methods.",
-    href: "/services/pelvic-floor-rehabilitation",
-  },
-  {
-    icon: <Hand size={20} />,
-    title: "Manual Therapy",
-    description:
-      "Hands-on treatment to restore movement, reduce pain and improve musculoskeletal function.",
-    href: "/services/manual-therapy",
-  },
-  {
-    icon: <Plus size={20} />,
-    title: "Post-Surgery Rehabilitation",
-    description:
-      "Safe, progressive recovery after surgical procedures guided by personalised treatment plans.",
-    href: "/services/post-surgery-rehabilitation",
-  },
-  {
-    icon: <ArrowUpDown size={20} />,
-    title: "Back & Neck Pain Treatment",
-    description:
-      "Evidence-based treatment for chronic and acute spinal pain conditions affecting daily life.",
-    href: "/services/back-neck-pain-treatment",
-  },
-];
+const services = servicesData.slice(0, 6);
 
 export function ServicesPreview() {
   return (
@@ -93,11 +52,12 @@ export function ServicesPreview() {
         >
           {services.map((service) => (
             <ServiceCard
-              key={service.href}
-              icon={service.icon}
+              key={service.slug}
+              icon={SERVICE_ICONS[service.slug]}
               title={service.title}
               description={service.description}
-              href={service.href}
+              href={`/services/${service.slug}`}
+              conditions={service.conditions}
             />
           ))}
         </motion.div>

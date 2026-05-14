@@ -9,30 +9,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { staggerContainer, fadeInUp } from "@/lib/motion";
 import { ServiceData, servicesData } from "@/data/services";
 import { CLINIC_INFO } from "@/data/navigation";
-import {
-  Activity,
-  Zap,
-  Heart,
-  Hand,
-  Plus,
-  ArrowUpDown,
-  Crosshair,
-  Dumbbell,
-  MoveHorizontal,
-} from "lucide-react";
-import { ReactNode } from "react";
-
-const iconMap: Record<string, ReactNode> = {
-  "orthopedic-rehabilitation": <Activity size={20} />,
-  "sports-injury-rehabilitation": <Zap size={20} />,
-  "pelvic-floor-rehabilitation": <Heart size={20} />,
-  "manual-therapy": <Hand size={20} />,
-  "post-surgery-rehabilitation": <Plus size={20} />,
-  "back-neck-pain-treatment": <ArrowUpDown size={20} />,
-  "dry-needling": <Crosshair size={20} />,
-  "exercise-therapy": <Dumbbell size={20} />,
-  "mobility-strength-recovery": <MoveHorizontal size={20} />,
-};
+import { SERVICE_ICONS } from "@/data/serviceIcons";
 
 interface ServiceDetailProps {
   service: ServiceData;
@@ -376,7 +353,7 @@ export function ServiceDetail({ service }: ServiceDetailProps) {
             {relatedServices.map((related) => (
               <ServiceCard
                 key={related.slug}
-                icon={iconMap[related.slug] ?? <Activity size={20} />}
+                icon={SERVICE_ICONS[related.slug]}
                 title={related.title}
                 description={related.description}
                 href={`/services/${related.slug}`}
