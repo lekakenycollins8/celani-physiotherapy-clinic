@@ -4,9 +4,10 @@ import { ReactNode } from "react";
 interface EyebrowLabelProps {
   children: ReactNode;
   className?: string;
+  lineColor?: string;
 }
 
-export function EyebrowLabel({ children, className }: EyebrowLabelProps) {
+export function EyebrowLabel({ children, className, lineColor = "bg-accent" }: EyebrowLabelProps) {
   return (
     <span
       className={cn(
@@ -15,7 +16,7 @@ export function EyebrowLabel({ children, className }: EyebrowLabelProps) {
         className
       )}
     >
-      <span className="inline-block w-4 h-px bg-accent" aria-hidden="true" />
+      <span className={cn("inline-block w-4 h-px", lineColor)} aria-hidden="true" />
       {children}
     </span>
   );
