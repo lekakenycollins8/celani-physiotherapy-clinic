@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock } from "lucide-react";
 import { SERVICES, CLINIC_INFO, NAV_LINKS } from "@/data/navigation";
 import { cn } from "@/lib/utils";
@@ -20,13 +21,23 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1 flex flex-col gap-5">
-            <div>
-              <span className="font-heading font-bold text-xl text-white tracking-tight block">
-                CELANI
-              </span>
-              <span className="text-sm text-primary-foreground/50 font-sans tracking-wide">
-                Physiotherapy & Sports Injuries
-              </span>
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/logo.svg"
+                alt="CELANI Physiotherapy logo"
+                width={400}
+                height={287}
+                className="h-20 w-20"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+              <div className="flex flex-col leading-tight gap-0.5">
+                <span className="font-heading font-bold text-2xl md:text-3xl tracking-tight leading-none text-white">
+                  CELANI
+                </span>
+                <span className="text-[0.6rem] uppercase tracking-[0.22em] text-primary-foreground/55 font-semibold">
+                  Physiotherapy &amp; Sports Injuries
+                </span>
+              </div>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60 max-w-xs">
               Professional physiotherapy and rehabilitation care in Nairobi. We help you recover, rebuild strength and return to your active lifestyle.

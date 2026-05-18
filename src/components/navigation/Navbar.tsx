@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, Phone, MessageCircle, X } from "lucide-react";
@@ -57,13 +58,37 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex flex-col leading-none shrink-0">
-              <span className="font-heading font-bold text-xl md:text-2xl text-foreground tracking-tight">
-                CELANI
-              </span>
-              <span className="text-[10px] text-muted-foreground font-sans tracking-widest uppercase hidden sm:block">
-                Physiotherapy & Sports Injuries
-              </span>
+            <Link
+              href="/"
+              className="flex items-center gap-3 shrink-0"
+              aria-label="CELANI Physiotherapy home"
+            >
+              <Image
+                src="/images/logo.svg"
+                alt="CELANI Physiotherapy logo"
+                width={400}
+                height={287}
+                priority
+                className="h-14 w-auto md:h-16 lg:h-[4.5rem]"
+              />
+              <div className="flex flex-col leading-tight gap-0.5">
+                <span
+                  className={cn(
+                    "font-heading font-bold text-2xl md:text-3xl tracking-tight leading-none transition-colors duration-200",
+                    scrolled ? "text-foreground" : "text-black"
+                  )}
+                >
+                  CELANI
+                </span>
+                <span
+                  className={cn(
+                    "text-[0.6rem] md:text-[0.65rem] font-semibold uppercase tracking-[0.22em] transition-colors duration-200",
+                    scrolled ? "text-muted-foreground" : "text-black/70"
+                  )}
+                >
+                  Physiotherapy &amp; Sports Injuries
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Nav */}
