@@ -69,6 +69,7 @@ export function Navbar() {
                 width={400}
                 height={287}
                 priority
+                loading="eager"
                 className={cn(
                   "h-[80px] md:h-[90px] lg:h-[150px] w-auto object-contain drop-shadow-sm",
                   scrolled
