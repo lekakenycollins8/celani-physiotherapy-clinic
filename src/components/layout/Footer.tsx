@@ -27,7 +27,7 @@ export function Footer() {
                 alt="CELANI Physiotherapy logo"
                 width={400}
                 height={287}
-                className="h-20 w-20"
+                className="h-[70px] md:h-[82px] lg:h-[90px] w-auto object-contain drop-shadow-sm"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <div className="flex flex-col leading-tight gap-0.5">
