@@ -69,13 +69,18 @@ export function Navbar() {
                 width={400}
                 height={287}
                 priority
-                className="h-14 w-auto md:h-16 lg:h-[4.5rem]"
+                className={cn(
+                  "h-16 w-auto md:h-18 lg:h-[4.5rem] transition-all duration-300",
+                  scrolled
+                    ? "drop-shadow-sm"
+                    : "max-lg:brightness-0 max-lg:invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)]"
+                )}
               />
               <div className="flex flex-col leading-tight gap-0.5">
                 <span
                   className={cn(
                     "font-heading font-bold text-2xl md:text-3xl tracking-tight leading-none transition-colors duration-200",
-                    scrolled ? "text-foreground" : "text-black"
+                    scrolled ? "text-foreground" : "text-white lg:text-black"
                   )}
                 >
                   CELANI
@@ -83,7 +88,7 @@ export function Navbar() {
                 <span
                   className={cn(
                     "text-[0.6rem] md:text-[0.65rem] font-semibold uppercase tracking-[0.22em] transition-colors duration-200",
-                    scrolled ? "text-muted-foreground" : "text-black/70"
+                    scrolled ? "text-muted-foreground" : "text-white/70 lg:text-black/70"
                   )}
                 >
                   Physiotherapy &amp; Sports Injuries
@@ -232,10 +237,13 @@ export function Navbar() {
             {/* Mobile menu trigger */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl hover:bg-muted/50 transition-colors duration-200"
+              className={cn(
+                "lg:hidden flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200",
+                scrolled ? "hover:bg-muted/50" : "hover:bg-white/15"
+              )}
               aria-label="Open navigation menu"
             >
-              <Menu size={20} className="text-foreground" />
+              <Menu size={20} className={cn("transition-colors duration-200", scrolled ? "text-foreground" : "text-white")} />
             </button>
           </div>
         </div>
