@@ -70,7 +70,7 @@ export function Navbar() {
                 height={287}
                 priority
                 className={cn(
-                  "h-16 w-auto md:h-18 lg:h-[4.5rem] transition-all duration-300",
+                  "h-[70px] md:h-[82px] lg:h-[90px] w-auto object-contain drop-shadow-sm",
                   scrolled
                     ? "drop-shadow-sm"
                     : "max-lg:brightness-0 max-lg:invert drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)]"
