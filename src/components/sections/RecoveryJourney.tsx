@@ -71,7 +71,7 @@ export function RecoveryJourney() {
         <div className="relative">
           {/* Connecting line — desktop only */}
           <div
-            className="absolute top-[2.25rem] left-[calc(10%+1.5rem)] right-[calc(10%+1.5rem)] h-px bg-border/50 hidden lg:block"
+            className="absolute top-[2.25rem] left-[calc(10%+1.5rem)] right-[calc(10%+1.5rem)] h-px bg-border hidden lg:block"
             aria-hidden="true"
           />
 
@@ -91,11 +91,11 @@ export function RecoveryJourney() {
               >
                 {/* Step number with dot on connecting line */}
                 <div className="relative flex items-center gap-3 lg:flex-col lg:items-start lg:gap-0">
-                  <span className="font-heading font-bold text-3xl text-accent/60 leading-none group-hover:text-accent transition-colors duration-300">
+                  <span className="font-heading font-bold text-3xl text-accent leading-none transition-colors duration-300">
                     {step.number}
                   </span>
                   {/* Dot on the connecting line */}
-                  <div className="absolute -top-[1.85rem] left-3 w-3 h-3 rounded-full bg-primary/60 border-2 border-background shadow-sm hidden lg:block" />
+                  <div className="absolute -top-[1.85rem] left-3 w-3 h-3 rounded-full bg-primary border-2 border-background shadow-sm hidden lg:block" />
                 </div>
 
                 <div className="flex flex-col gap-2">

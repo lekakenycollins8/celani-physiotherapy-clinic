@@ -35,9 +35,9 @@ export const SERVICES = [
     description: "Targeted muscle tension relief",
   },
   {
-    title: "Exercise Therapy",
-    href: "/services/exercise-therapy",
-    description: "Strength and mobility rehabilitation programs",
+    title: "Home-based Care",
+    href: "/services/home-based-care",
+    description: "Professional physiotherapy delivered at home",
   },
   {
     title: "Mobility & Strength Recovery",
@@ -57,7 +57,7 @@ export const CLINIC_INFO = {
   name: "CELANI Physiotherapy",
   phone: "0791 484940",
   whatsapp: "254791484940",
-  address: "Princess Park Apartments, Kibera Rd",
+  address: "Princess Park Apartments, Ground Floor Room 10, Kibera Road Off Kabarnet Road",
   city: "Nairobi",
-  landmark: "Near Ngong Road",
+  landmark: "Along Ngong Road",
 };

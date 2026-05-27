@@ -25,7 +25,7 @@ const items = [
   {
     icon: MapPin,
     title: "Nairobi-Based Care",
-    description: "Conveniently located at Princess Park, near Ngong Road",
+    description: "Princess Park Apartments, Ground Floor Room 10, Kibera Rd Off Kabarnet Rd, Nairobi",
   },
 ];
 
@@ -48,18 +48,18 @@ export function TrustIndicators() {
                 variants={fadeInUp}
                 className={cn(
                   "flex gap-4 p-5 rounded-2xl",
-                  "bg-white/40 border border-foreground/10",
-                  "hover:bg-white/55 hover:border-foreground/20 transition-all duration-300"
+                  "bg-white/60 border border-foreground/20",
+                  "hover:bg-white/80 hover:border-foreground/40 transition-all duration-300"
                 )}
               >
-                <div className="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-foreground/20 flex items-center justify-center shrink-0">
                   <Icon size={18} className="text-foreground" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="font-semibold text-sm text-foreground leading-snug">
                     {item.title}
                   </span>
-                  <span className="text-xs text-foreground/70 leading-relaxed">
+                  <span className="text-xs text-foreground leading-relaxed">
                     {item.description}
                   </span>
                 </div>

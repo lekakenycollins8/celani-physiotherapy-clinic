@@ -92,7 +92,7 @@ export function WhyChooseUs() {
           >
             <div className="flex flex-col gap-5">
               <motion.div variants={fadeInUp}>
-                <EyebrowLabel className="text-foreground" lineColor="bg-foreground/40">Why Choose Us</EyebrowLabel>
+                <EyebrowLabel className="text-foreground" lineColor="bg-foreground">Why Choose Us</EyebrowLabel>
               </motion.div>
               <motion.div variants={fadeInUp}>
                 <SectionHeading as="h2">
@@ -118,7 +118,7 @@ export function WhyChooseUs() {
                   custom={i}
                   className="flex gap-4"
                 >
-                  <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-foreground/15 shrink-0 mt-0.5">
+                  <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-foreground/25 shrink-0 mt-0.5">
                     <Check size={14} className="text-foreground" />
                   </div>
                   <div className="flex flex-col gap-1">

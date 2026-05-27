@@ -65,8 +65,8 @@ export function ServiceCard({
         {conditions && conditions.length > 0 && (
           <div className="flex flex-col gap-1.5 pt-1">
             {conditions.slice(0, 3).map((c) => (
-              <span key={c} className="flex items-center gap-2 text-xs text-muted-foreground/80">
-                <span className="w-1 h-1 rounded-full bg-primary/50 flex-shrink-0" />
+              <span key={c} className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
                 {c}
               </span>
             ))}

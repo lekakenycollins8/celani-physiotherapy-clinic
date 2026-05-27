@@ -15,7 +15,7 @@ const OPENING_HOURS = [
 ];
 
 const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/Princess+Park+Apartments+Kibera+Road+Nairobi";
+  "https://www.google.com/maps/search/Princess+Park+Apartments+Ground+Floor+Room+10+Kibera+Road+Off+Kabarnet+Road+Nairobi";
 
 export function ContactPage() {
   return (
@@ -359,9 +359,7 @@ export function ContactPage() {
                   Getting Here
                 </span>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We are located in Princess Park Apartments on Kibera Road,
-                  near Ngong Road in Nairobi. Street parking is available
-                  outside the complex.
+                  We are located at Princess Park Apartments, Ground Floor Room 10, Kibera Road Off Kabarnet Road, along Ngong Road, Nairobi. Street parking is available outside the complex.
                 </p>
               </motion.div>
             </motion.div>

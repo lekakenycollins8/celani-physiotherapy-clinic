@@ -94,7 +94,7 @@ export function AboutPage() {
             className="max-w-2xl"
           >
             <motion.div variants={fadeInUp}>
-              <EyebrowLabel className="text-foreground/70" lineColor="bg-foreground/30">
+              <EyebrowLabel className="text-foreground" lineColor="bg-foreground">
                 Nairobi's Specialist Physiotherapy Clinic
               </EyebrowLabel>
             </motion.div>
@@ -110,7 +110,7 @@ export function AboutPage() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-base md:text-lg text-foreground/75 leading-[1.8] max-w-[520px]"
+              className="text-base md:text-lg text-foreground leading-[1.8] max-w-[520px]"
             >
               A specialist physiotherapy and sports injuries clinic committed
               to expert, evidence-based rehabilitation — helping people across
@@ -161,7 +161,7 @@ export function AboutPage() {
                 variants={fadeInUp}
                 className="text-base text-muted-foreground leading-[1.85] max-w-[480px]"
               >
-                Located in Princess Park, Kibera Road, our clinic specialises
+                Located at Princess Park Apartments, Ground Floor Room 10, Kibera Road Off Kabarnet Road, our clinic specialises
                 in orthopedic rehabilitation, sports injury recovery, pelvic
                 floor health and a comprehensive range of musculoskeletal
                 conditions — all treated using evidence-based methods.

@@ -62,7 +62,7 @@ export function Hero() {
             <motion.div variants={fadeInUp}>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white/80 lg:text-muted-foreground bg-white/15 lg:bg-muted/60 px-3 py-1.5 rounded-full border border-white/25 lg:border-border/50">
                 <MapPin size={11} className="text-white/80 lg:text-primary shrink-0" />
-                Princess Park, Kibera Rd · Nairobi
+                Princess Park, Room 10 · Kibera Rd Off Kabarnet Rd · Nairobi
               </span>
             </motion.div>
 

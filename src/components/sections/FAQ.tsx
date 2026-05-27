@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Where is CELANI Physiotherapy located?",
     answer:
-      "We are located at Princess Park Apartments, Kibera Road, Nairobi — near Ngong Road. Please contact us via phone or WhatsApp for specific directions or to confirm your appointment details.",
+      "We are located at Princess Park Apartments, Ground Floor Room 10, Kibera Road Off Kabarnet Road, along Ngong Road, Nairobi. Please contact us via phone or WhatsApp for specific directions or to confirm your appointment details.",
   },
 ];
 

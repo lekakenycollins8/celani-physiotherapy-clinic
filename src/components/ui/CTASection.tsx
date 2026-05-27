@@ -56,7 +56,7 @@ export function CTASection({
           variants={fadeInUp}
           className={cn(
             "text-base md:text-lg leading-relaxed",
-            variant === "default" ? "text-primary-foreground/80" : "text-muted-foreground"
+            variant === "default" ? "text-primary-foreground" : "text-muted-foreground"
           )}
         >
           {description}

@@ -123,7 +123,7 @@ export const servicesData: ServiceData[] = [
     ],
     relatedSlugs: [
       "orthopedic-rehabilitation",
-      "exercise-therapy",
+      "home-based-care",
       "mobility-strength-recovery",
     ],
   },
@@ -136,12 +136,11 @@ export const servicesData: ServiceData[] = [
     intro:
       "Our pelvic floor rehabilitation program provides sensitive, evidence-based treatment for both women and men experiencing pelvic floor dysfunction. Delivered with complete professionalism and discretion, our specialist-led care addresses a wide range of conditions that significantly affect quality of life.",
     conditions: [
-      "Urinary incontinence and urgency",
+      "Urinary incontinence and bladder urgency/frequency",
       "Pelvic organ prolapse",
       "Post-natal pelvic floor weakness",
       "Pelvic pain",
       "Diastasis recti",
-      "Bladder urgency and frequency",
       "Post-prostatectomy recovery",
     ],
     treatmentApproach: [
@@ -179,7 +178,7 @@ export const servicesData: ServiceData[] = [
       "Post-natal recovery support",
       "Long-term pelvic health management",
     ],
-    relatedSlugs: ["orthopedic-rehabilitation", "manual-therapy", "exercise-therapy"],
+    relatedSlugs: ["orthopedic-rehabilitation", "manual-therapy", "home-based-care"],
   },
   {
     slug: "manual-therapy",
@@ -291,7 +290,7 @@ export const servicesData: ServiceData[] = [
       "Faster return to independence",
       "Confidence through measurable milestones",
     ],
-    relatedSlugs: ["orthopedic-rehabilitation", "manual-therapy", "exercise-therapy"],
+    relatedSlugs: ["orthopedic-rehabilitation", "manual-therapy", "home-based-care"],
   },
   {
     slug: "back-neck-pain-treatment",
@@ -345,7 +344,7 @@ export const servicesData: ServiceData[] = [
       "Better daily function and sleep quality",
       "Long-term self-management skills",
     ],
-    relatedSlugs: ["manual-therapy", "dry-needling", "exercise-therapy"],
+    relatedSlugs: ["manual-therapy", "dry-needling", "home-based-care"],
   },
   {
     slug: "dry-needling",
@@ -405,61 +404,61 @@ export const servicesData: ServiceData[] = [
     ],
   },
   {
-    slug: "exercise-therapy",
-    title: "Exercise Therapy",
-    tagline: "Structured movement for lasting recovery",
+    slug: "home-based-care",
+    title: "Home-based Care",
+    tagline: "Expert physiotherapy delivered directly to your home",
     description:
-      "Strength and mobility rehabilitation programs tailored to your specific recovery goals.",
+      "Comprehensive physiotherapy care for long-term patients, chronic illness, acute pain and all rehabilitation needs — delivered at home.",
     intro:
-      "Exercise therapy forms the foundation of lasting rehabilitation. Our evidence-based, individually prescribed exercise programs address strength, mobility, coordination and endurance deficits that result from injury, surgery or chronic conditions — delivering durable outcomes beyond the treatment room.",
+      "Our home-based physiotherapy service brings professional, evidence-based care directly to your door. Designed for long-term patients, those managing chronic illness, individuals with acute pain, and anyone who requires rehabilitation but is unable to travel to the clinic, our mobile physiotherapists deliver the same expert care available at our Nairobi clinic — in the comfort and safety of your home.",
     conditions: [
-      "General deconditioning and weakness",
-      "Musculoskeletal movement deficits",
-      "Post-injury rehabilitation",
-      "Chronic pain management",
-      "Age-related mobility decline",
-      "Post-surgical recovery",
-      "Sports performance rehabilitation",
+      "Long-term and chronic illness patients",
+      "Acute pain limiting mobility or travel",
+      "Post-surgery recovery at home",
+      "Elderly patients with limited mobility",
+      "Neurological conditions affecting movement",
+      "Patients with chronic musculoskeletal conditions",
+      "All physiotherapy conditions requiring home-based delivery",
     ],
     treatmentApproach: [
       {
-        step: "Baseline Assessment",
+        step: "Home Assessment",
         detail:
-          "Comprehensive strength, mobility and endurance evaluation to establish your starting point.",
+          "Comprehensive evaluation conducted at your home, assessing your condition, environment and care needs.",
       },
       {
-        step: "Exercise Prescription",
+        step: "Personalised Treatment Plan",
         detail:
-          "Individualised exercise program targeting your specific deficits and recovery goals.",
+          "A tailored rehabilitation program designed around your specific condition, goals and home setting.",
       },
       {
-        step: "Progressive Loading",
+        step: "Hands-on Physiotherapy",
         detail:
-          "Gradual increase in exercise intensity and complexity based on your body's response.",
+          "Full range of manual therapy, mobilisation and soft tissue techniques delivered in your home.",
       },
       {
-        step: "Supervised Sessions",
+        step: "Home Exercise Programme",
         detail:
-          "In-clinic exercise sessions with real-time coaching and technique correction.",
+          "Prescribed, supervised exercises that integrate into your daily routine for consistent progress.",
       },
       {
-        step: "Home Program Development",
+        step: "Ongoing Monitoring",
         detail:
-          "Structured take-home exercise plan to maximise recovery progress between appointments.",
+          "Regular reassessment and programme progression to ensure safe, effective and sustained recovery.",
       },
     ],
     benefits: [
-      "Improved strength and joint stability",
-      "Better mobility and flexibility",
-      "Enhanced endurance and functional capacity",
-      "Reduced pain and injury risk",
-      "Sustainable long-term recovery results",
-      "Increased confidence in movement",
+      "No travel required — care comes to you",
+      "Consistent expert care for long-term conditions",
+      "Rehabilitation in a familiar, comfortable environment",
+      "Suitable for acute, chronic and post-surgical needs",
+      "Reduced physical and logistical burden",
+      "Same evidence-based quality as in-clinic care",
     ],
     relatedSlugs: [
-      "sports-injury-rehabilitation",
-      "mobility-strength-recovery",
+      "orthopedic-rehabilitation",
       "post-surgery-rehabilitation",
+      "mobility-strength-recovery",
     ],
   },
   {
@@ -515,7 +514,7 @@ export const servicesData: ServiceData[] = [
       "Long-term active lifestyle maintenance",
     ],
     relatedSlugs: [
-      "exercise-therapy",
+      "home-based-care",
       "orthopedic-rehabilitation",
       "sports-injury-rehabilitation",
     ],

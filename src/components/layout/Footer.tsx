@@ -14,7 +14,7 @@ const OPENING_HOURS = [
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-primary-foreground/80">
+    <footer className="bg-foreground text-primary-foreground">
       {/* Main footer */}
       <div className="mx-auto max-w-[1280px] px-5 md:px-8 lg:px-12 xl:px-14 pt-16 md:pt-20 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
@@ -34,25 +34,25 @@ export function Footer() {
                 <span className="font-heading font-bold text-2xl md:text-3xl tracking-tight leading-none text-white">
                   CELANI
                 </span>
-                <span className="text-[0.6rem] uppercase tracking-[0.22em] text-primary-foreground/55 font-semibold">
+                <span className="text-[0.6rem] uppercase tracking-[0.22em] text-primary-foreground font-semibold">
                   Physiotherapy &amp; Sports Injuries
                 </span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-primary-foreground/60 max-w-xs">
+            <p className="text-sm leading-relaxed text-primary-foreground max-w-xs">
               Professional physiotherapy and rehabilitation care in Nairobi. We help you recover, rebuild strength and return to your active lifestyle.
             </p>
             <div className="flex flex-col gap-3 mt-2">
               <div className="flex items-start gap-3 text-sm">
                 <MapPin size={15} className="text-primary mt-0.5 shrink-0" />
-                <span className="text-primary-foreground/60 leading-relaxed">
+                <span className="text-primary-foreground leading-relaxed">
                   {CLINIC_INFO.address},<br />
                   {CLINIC_INFO.city} – {CLINIC_INFO.landmark}
                 </span>
               </div>
               <a
                 href={`tel:${CLINIC_INFO.phone}`}
-                className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-primary transition-colors duration-200"
+                className="flex items-center gap-3 text-sm text-primary-foreground hover:text-primary transition-colors duration-200"
               >
                 <Phone size={15} className="text-primary shrink-0" />
                 {CLINIC_INFO.phone}
@@ -70,7 +70,7 @@ export function Footer() {
                 <li key={service.href}>
                   <Link
                     href={service.href}
-                    className="text-sm text-primary-foreground/60 hover:text-primary transition-colors duration-200"
+                    className="text-sm text-primary-foreground hover:text-primary transition-colors duration-200"
                   >
                     {service.title}
                   </Link>
@@ -97,7 +97,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-primary transition-colors duration-200"
+                    className="text-sm text-primary-foreground hover:text-primary transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -106,7 +106,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-primary-foreground/60 hover:text-primary transition-colors duration-200"
+                  className="text-sm text-primary-foreground hover:text-primary transition-colors duration-200"
                 >
                   Services
                 </Link>
@@ -122,10 +122,10 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {OPENING_HOURS.map((item) => (
                 <li key={item.day} className="flex flex-col gap-0.5">
-                  <span className="text-xs font-medium text-primary-foreground/50 uppercase tracking-wide">
+                  <span className="text-xs font-medium text-primary-foreground uppercase tracking-wide">
                     {item.day}
                   </span>
-                  <span className="text-sm text-primary-foreground/70 flex items-center gap-1.5">
+                  <span className="text-sm text-primary-foreground flex items-center gap-1.5">
                     <Clock size={12} className="text-primary shrink-0" />
                     {item.hours}
                   </span>
@@ -152,10 +152,10 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-[1280px] px-5 md:px-8 lg:px-12 xl:px-14 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-primary-foreground/40">
+          <p className="text-xs text-primary-foreground">
             © {new Date().getFullYear()} CELANI Physiotherapy & Sports Injuries Clinic. All rights reserved.
           </p>
-          <p className="text-xs text-primary-foreground/40">
+          <p className="text-xs text-primary-foreground">
             Nairobi, Kenya
           </p>
         </div>

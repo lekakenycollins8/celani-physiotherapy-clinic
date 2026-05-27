@@ -11,7 +11,7 @@ export function LocalBusinessJsonLd() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Princess Park Apartments, Kibera Rd",
+      streetAddress: "Princess Park Apartments, Ground Floor Room 10, Kibera Road Off Kabarnet Road",
       addressLocality: "Nairobi",
       addressRegion: "Nairobi County",
       addressCountry: "KE",
@@ -35,7 +35,7 @@ export function LocalBusinessJsonLd() {
         closes: "16:00",
       },
     ],
-    hasMap: "https://www.google.com/maps/search/Princess+Park+Apartments+Kibera+Road+Nairobi",
+    hasMap: "https://www.google.com/maps/search/Princess+Park+Apartments+Ground+Floor+Room+10+Kibera+Road+Off+Kabarnet+Road+Nairobi",
     medicalSpecialty: [
       "Physiotherapy",
       "Sports Medicine",

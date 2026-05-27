@@ -44,13 +44,13 @@ export function Testimonials() {
           className="flex flex-col items-center text-center gap-4 mb-10 md:mb-12"
         >
           <motion.div variants={fadeInUp}>
-            <EyebrowLabel className="text-foreground" lineColor="bg-foreground/40">Patient Stories</EyebrowLabel>
+            <EyebrowLabel className="text-foreground" lineColor="bg-foreground">Patient Stories</EyebrowLabel>
           </motion.div>
           <motion.div variants={fadeInUp}>
             <SectionHeading as="h2">Trusted by Our Patients</SectionHeading>
           </motion.div>
           <motion.div variants={fadeInUp} className="max-w-lg">
-            <p className="text-base md:text-lg text-foreground/70 leading-[1.7]">
+            <p className="text-base md:text-lg text-foreground leading-[1.7]">
               Real experiences from patients who have recovered and returned to
               their active lives through CELANI Physiotherapy.
             </p>

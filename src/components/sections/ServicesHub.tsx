@@ -57,7 +57,7 @@ export function ServicesHub() {
             <motion.div variants={fadeInUp}>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white/60 bg-white/10 px-3 py-1.5 rounded-full border border-white/15 mb-5">
                 <MapPin size={11} className="text-white/60 shrink-0" />
-                Princess Park, Kibera Rd · Nairobi
+                Princess Park, Room 10 · Kibera Rd Off Kabarnet Rd · Nairobi
               </span>
             </motion.div>
 
