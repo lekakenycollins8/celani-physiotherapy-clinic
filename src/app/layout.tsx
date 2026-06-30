@@ -47,6 +47,21 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap"
           rel="stylesheet"
         />
+        {/* Google Ads tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18286557698"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18286557698');
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <LocalBusinessJsonLd />
