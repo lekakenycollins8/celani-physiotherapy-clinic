@@ -65,6 +65,14 @@ export default function NotFound() {
             <a
               href={`tel:${CLINIC_INFO.phone}`}
               className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors duration-200"
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                  window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                } else {
+                  window.location.href = `tel:${CLINIC_INFO.phone}`;
+                }
+              }}
             >
               <Phone size={14} />
               {CLINIC_INFO.phone}

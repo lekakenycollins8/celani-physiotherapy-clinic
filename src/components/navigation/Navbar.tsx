@@ -198,6 +198,14 @@ export function Navbar() {
                 href={`tel:${CLINIC_INFO.phone}`}
                 className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
                 aria-label={`Call ${CLINIC_INFO.phone}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                  } else {
+                    window.location.href = `tel:${CLINIC_INFO.phone}`;
+                  }
+                }}
               >
                 <Phone size={13} />
                 <span className="hidden xl:inline">{CLINIC_INFO.phone}</span>
@@ -396,6 +404,14 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           <a
             href={`tel:${CLINIC_INFO.phone}`}
             className="flex items-center justify-center gap-1.5 text-xs text-white/40 hover:text-white/70 transition-colors duration-200 py-1"
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+              } else {
+                window.location.href = `tel:${CLINIC_INFO.phone}`;
+              }
+            }}
           >
             <Phone size={11} />
             {CLINIC_INFO.phone}

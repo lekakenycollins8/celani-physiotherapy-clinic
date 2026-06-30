@@ -62,6 +62,25 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Click to call conversion tracking */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18286557698/VGNbCLvlpsgcEIL02o9E',
+                  'event_callback': callback
+                });
+                return false;
+              }
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <LocalBusinessJsonLd />

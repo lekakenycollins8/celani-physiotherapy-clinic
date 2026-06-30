@@ -44,6 +44,14 @@ export function StickyCTA() {
                 "shadow-md hover:shadow-lg hover:-translate-y-0.5",
                 "transition-all duration-300"
               )}
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                  window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                } else {
+                  window.location.href = `tel:${CLINIC_INFO.phone}`;
+                }
+              }}
             >
               <Phone size={18} />
             </a>

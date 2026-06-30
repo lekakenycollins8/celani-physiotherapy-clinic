@@ -108,6 +108,14 @@ export function ContactPage() {
                 href={`tel:${CLINIC_INFO.phone}`}
                 variants={fadeInUp}
                 className="flex items-start gap-4 p-6 rounded-2xl bg-muted/40 border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all duration-300 group"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                  } else {
+                    window.location.href = `tel:${CLINIC_INFO.phone}`;
+                  }
+                }}
               >
                 <div className="w-11 h-11 rounded-xl bg-primary/12 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-200">
                   <Phone size={18} className="text-primary" />
@@ -225,6 +233,14 @@ export function ContactPage() {
                 <a
                   href={`tel:${CLINIC_INFO.phone}`}
                   className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-md transition-all duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                      window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                    } else {
+                      window.location.href = `tel:${CLINIC_INFO.phone}`;
+                    }
+                  }}
                 >
                   <Phone size={16} />
                   Call {CLINIC_INFO.phone}

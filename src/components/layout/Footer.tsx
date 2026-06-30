@@ -53,6 +53,14 @@ export function Footer() {
               <a
                 href={`tel:${CLINIC_INFO.phone}`}
                 className="flex items-center gap-3 text-sm text-primary-foreground hover:text-primary transition-colors duration-200"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                  } else {
+                    window.location.href = `tel:${CLINIC_INFO.phone}`;
+                  }
+                }}
               >
                 <Phone size={15} className="text-primary shrink-0" />
                 {CLINIC_INFO.phone}

@@ -35,6 +35,14 @@ export function MobileBookingBar() {
               href={`tel:${CLINIC_INFO.phone}`}
               aria-label={`Call ${CLINIC_INFO.phone}`}
               className="flex flex-col items-center gap-1 py-2 px-3 rounded-xl bg-muted/60 hover:bg-muted transition-colors duration-200"
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                  window.gtag_report_conversion(`tel:${CLINIC_INFO.phone}`);
+                } else {
+                  window.location.href = `tel:${CLINIC_INFO.phone}`;
+                }
+              }}
             >
               <Phone size={18} className="text-foreground" />
               <span className="text-[11px] font-semibold text-foreground leading-none">
