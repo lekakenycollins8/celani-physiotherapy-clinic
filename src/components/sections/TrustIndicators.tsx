@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+
+import React from "react";
+
 import { ShieldCheck, UserCheck, Zap, MapPin } from "lucide-react";
 import { Container } from "@/components/layout/Container";
-import { staggerContainer, fadeInUp } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const items = [
@@ -33,19 +34,12 @@ export function TrustIndicators() {
   return (
     <section className="py-8 md:py-10 lg:py-12 bg-accent">
       <Container>
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {items.map((item) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <div
                 key={item.title}
-                variants={fadeInUp}
                 className={cn(
                   "flex gap-4 p-5 rounded-2xl",
                   "bg-white/60 border border-foreground/20",
@@ -63,10 +57,10 @@ export function TrustIndicators() {
                     {item.description}
                   </span>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );
